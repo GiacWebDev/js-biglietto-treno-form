@@ -18,26 +18,32 @@
 
 
 // 1. 
-let anniPasseggero = parseInt(prompt('Quanti anni hai?'));
-let kmTotali = parseInt(prompt('quanti km dovrai effettuare?'));
-const prezzoKm = 0.21;
-const scontoMinori = 20;
-const scontoOver = 40;
-let costoBiglietto = prezzoKm * kmTotali;
+// let anniPasseggero = parseInt(prompt('Quanti anni hai?'));
+// let kmTotali = parseInt(prompt('quanti km dovrai effettuare?'));
+// const prezzoKm = 0.21;
+// const scontoMinori = 20;
+// const scontoOver = 40;
+// let costoBiglietto = prezzoKm * kmTotali;
 
-console.log(anniPasseggero);
-console.log(kmTotali);
-console.log(costoBiglietto);
+// console.log(anniPasseggero);
+// console.log(kmTotali);
+// console.log(costoBiglietto);
 
-if (anniPasseggero <= 18) {
-  costoBiglietto = costoBiglietto - (costoBiglietto * 20 / 100);
-  console.log(costoBiglietto);
-} else if (anniPasseggero >= 65) {
-  costoBiglietto = costoBiglietto - (costoBiglietto * 20 / 100);
-  console.log(costoBiglietto);
-}
+// if (anniPasseggero <= 18) {
+//   costoBiglietto = costoBiglietto - (costoBiglietto * 20 / 100);
+//   console.log(costoBiglietto);
+// } else if (anniPasseggero >= 65) {
+//   costoBiglietto = costoBiglietto - (costoBiglietto * 20 / 100);
+//   console.log(costoBiglietto);
+// }
 
 // 2.
 const nomeUtente = document.getElementById('name');
 const kilometriTot = document.getElementById('km');
+
+nomeUtente = prompt('Inserisci il tuo nome');
+kilometriTot = prompt('Numero tot di chilometri');
+
+console.log(nomeUtente);
+console.log(kilometriTot);
 
