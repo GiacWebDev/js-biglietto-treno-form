@@ -51,16 +51,17 @@ btn.addEventListener('click',function(){
   const prezzoKm = 0.21;
   let costoBiglietto = prezzoKm * kmTotali;
 
-
   //imposto il prezzo in base all'età
-   if (fasciaEta = 2) {
+   if (fasciaEta == 2) {
      costoBiglietto = costoBiglietto - (costoBiglietto * 20 / 100);
      console.log(costoBiglietto);
-   } else if (fasciaEta = 3) {
+   } else if (fasciaEta == 3) {
      costoBiglietto = costoBiglietto - (costoBiglietto * 40 / 100);
      console.log(costoBiglietto);
+   } else if (fasciaEta == 1) {
+    costoBiglietto = costoBiglietto;
+    console.log(costoBiglietto);
    }
-
-})
+  })
 
 
