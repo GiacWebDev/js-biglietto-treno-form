@@ -53,11 +53,11 @@ btn.addEventListener('click',function(){
 
 
   //imposto il prezzo in base all'età
-   if (fasciaEta = maggiorenne) {
+   if (fasciaEta = 2) {
      costoBiglietto = costoBiglietto - (costoBiglietto * 20 / 100);
      console.log(costoBiglietto);
-   } else if (fasciaEta = minorenne) {
-     costoBiglietto = costoBiglietto - (costoBiglietto * 20 / 100);
+   } else if (fasciaEta = 3) {
+     costoBiglietto = costoBiglietto - (costoBiglietto * 40 / 100);
      console.log(costoBiglietto);
    }
 
