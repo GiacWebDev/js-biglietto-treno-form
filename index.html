@@ -14,17 +14,41 @@
 <body>
 
   <div class="container">
-    <div class="row">
 
-      <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
-      <div class="col">
-        <input type="text" name="name" id="name">
-        <input type="text" name="km" id="km">
+    <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
 
-      </div>
-    
-    </div>
-  </div>
+    <!-- FORM -->
+    <form id="form">
+        <div id="main_part_form">
+          <!-- NOME -->
+            <div>
+                <label for="name">Nome e Cognome</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <!-- KM -->
+            <div>
+                <label for="km">Km da percorrere</label>
+                <input type="text" id="km" name="km">
+            </div>
+            <!-- ANNI -->
+            <div>
+                <label for="age">Fascia d'età</label>
+                <div class="form">
+                  <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                    <option value="1">Maggiorenne</option>
+                    <option value="2">Minorenne</option>
+                    <option value="3">Over65</option>
+                  </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOTTONE -->
+        <div id="btn_part">
+            <button type="submit" id="generate_price">Genera</button>
+            <button type="reset" id="cancel">Annulla</button>
+        </div>
+    </form>
   
   <script src="js/script.js"></script>
 </body>

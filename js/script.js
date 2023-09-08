@@ -38,12 +38,14 @@
 // }
 
 // 2.
-const nomeUtente = document.getElementById('name');
-const kilometriTot = document.getElementById('km');
+const nomeUtente = document.getElementById('name').value;
+const kilometriTot = document.getElementById('km').value;
 
-nomeUtente = prompt('Inserisci il tuo nome');
-kilometriTot = prompt('Numero tot di chilometri');
 
-console.log(nomeUtente);
-console.log(kilometriTot);
+const btn = document.getElementById('btn')
+btn.addEventListener('click',function(){
+  
+})
+
+nomeUtente.value
 
