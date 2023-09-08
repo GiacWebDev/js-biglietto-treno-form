@@ -17,18 +17,6 @@
 // ----------------------------------- 
 
 
-// 1. 
-// let anniPasseggero = parseInt(prompt('Quanti anni hai?'));
-// let kmTotali = parseInt(prompt('quanti km dovrai effettuare?'));
-// const prezzoKm = 0.21;
-// const scontoMinori = 20;
-// const scontoOver = 40;
-// let costoBiglietto = prezzoKm * kmTotali;
-
-// console.log(anniPasseggero);
-// console.log(kmTotali);
-// console.log(costoBiglietto);
-
 // if (anniPasseggero <= 18) {
 //   costoBiglietto = costoBiglietto - (costoBiglietto * 20 / 100);
 //   console.log(costoBiglietto);
@@ -37,15 +25,42 @@
 //   console.log(costoBiglietto);
 // }
 
+
+// 1. 
+// let anniPasseggero = parseInt('Quanti anni hai?');
+// let kmTotali = parseInt('quanti km dovrai effettuare?');
+// const scontoMinori = 20;
+// const scontoOver = 40;
+
+
 // 2.
-const nomeUtente = document.getElementById('name').value;
-const kilometriTot = document.getElementById('km').value;
 
-
-const btn = document.getElementById('btn')
+// prendo il pulsante da html a js e gli dico le funzioni
+const btn = document.getElementById('generate_price')
 btn.addEventListener('click',function(){
-  
+  // prendo i valori dai campi in html
+  const nomeUtente = document.getElementById('name').value;
+  const kmTotali = document.getElementById('km').value;
+  // fascia età per applicare sconti
+  const fasciaEta = document.getElementById('floatingSelect').value
+  // faccio dei log di verifca
+  console.log(nomeUtente);
+  console.log(kmTotali);
+  console.log(fasciaEta);
+
+  const prezzoKm = 0.21;
+  let costoBiglietto = prezzoKm * kmTotali;
+
+
+  //imposto il prezzo in base all'età
+   if (fasciaEta = maggiorenne) {
+     costoBiglietto = costoBiglietto - (costoBiglietto * 20 / 100);
+     console.log(costoBiglietto);
+   } else if (fasciaEta = minorenne) {
+     costoBiglietto = costoBiglietto - (costoBiglietto * 20 / 100);
+     console.log(costoBiglietto);
+   }
+
 })
 
-nomeUtente.value
 

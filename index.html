@@ -18,7 +18,7 @@
     <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
 
     <!-- FORM -->
-    <form id="form">
+
         <div id="main_part_form">
           <!-- NOME -->
             <div>
@@ -35,9 +35,9 @@
                 <label for="age">Fascia d'età</label>
                 <div class="form">
                   <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                    <option value="1">Maggiorenne</option>
-                    <option value="2">Minorenne</option>
-                    <option value="3">Over65</option>
+                    <option value="maggiorenne">Maggiorenne</option>
+                    <option value="minorenne">Minorenne</option>
+                    <option value="over65">Over65</option>
                   </select>
                 </div>
             </div>
@@ -45,11 +45,11 @@
 
         <!-- BOTTONE -->
         <div id="btn_part">
-            <button type="submit" id="generate_price">Genera</button>
-            <button type="reset" id="cancel">Annulla</button>
+            <button id="generate_price">Genera</button>
+            <button id="cancel">Annulla</button>
         </div>
-    </form>
-  
+
+  </div>
   <script src="js/script.js"></script>
 </body>
 </html>
