@@ -104,4 +104,21 @@ btn.addEventListener('click', function() {
 
   })
 
+  const btnCancell = document.getElementById('cancell');
+  btnCancell.addEventListener("click", function() {
+
+    // porto dentro le varianti che utilizzo con il pulsante annulla
+    let ticketEl = document.querySelector('.ticket');
+    let nomeUtente = document.getElementById('name').value;
+    let kmTotali = document.getElementById('km').value;
+
+    ticketEl.classList.add('d-none');
+
+    const nomeUtenteCancell = nomeUtente.value;
+    const kmTotaliCancell = kmTotali.value;
+
+    nomeUtenteCancell.value = '';
+    kmTotaliCancell.value = '';
+
+  });
 
