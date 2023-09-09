@@ -57,7 +57,6 @@ btn.addEventListener('click', function() {
   ticketEl.classList.remove('d-none');
 
 
-
   // Programma per scelta carrozza casuale
 
   let gemeratoreCarrozza = Math.floor((Math.random() * 20) + 1);
@@ -81,26 +80,26 @@ btn.addEventListener('click', function() {
 
   passengerNameEl.innerHTML = nomeUtente;
   carrozzaEl.innerHTML = gemeratoreCarrozza;
-
+  CPCodeEl.innerHTML = generatoreCodiceCP;
 
   //imposto il prezzo in base all'età
    if (fasciaEta == 1) {
      costoBiglietto = costoBiglietto - (costoBiglietto * 20 / 100);
      console.log(costoBiglietto);
      offertEl.innerHTML = 'Biglietto Ridotto';
-     ticketPriceEl.innerHTML = `€ ${costoBiglietto}`;
+     ticketPriceEl.innerHTML = `€ ${costoBiglietto.toFixed(2)}`;
 
    } else if (fasciaEta == 3) {
      costoBiglietto = costoBiglietto - (costoBiglietto * 40 / 100);
      console.log(costoBiglietto);
      offertEl.innerHTML = 'Biglietto Ridotto';
-     ticketPriceEl.innerHTML = `€ ${costoBiglietto}`;
+     ticketPriceEl.innerHTML = `€ ${costoBiglietto.toFixed(2)}`;
 
    } else if (fasciaEta == 2) {
     costoBiglietto = costoBiglietto;
     console.log(costoBiglietto);
     offertEl.innerHTML = 'Biglietto Intero';
-    ticketEl.innerHTML = `€ ${costoBiglietto}`;
+    ticketPriceEl.innerHTML = `€ ${costoBiglietto.toFixed(2)}`;
    }
 
   })
