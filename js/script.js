@@ -54,6 +54,24 @@ btn.addEventListener('click', function() {
   // Riporto classi html su JS per scriverci dentro
 
   let ticketEl = document.querySelector('.ticket');
+  ticketEl.classList.remove('d-none');
+
+
+
+  // Programma per scelta carrozza casuale
+
+  let gemeratoreCarrozza = Math.floor((Math.random() * 20) + 1);
+  console.log(gemeratoreCarrozza);
+  
+  // Programma per scelta CodiceCP
+
+  const min = 90000
+  const max = 95000
+
+  let generatoreCodiceCP = Math.floor(Math.random() * (max - min + 1)) + min;
+  console.log(generatoreCodiceCP);
+
+  // Prendo in JS tutti gli elementi html per inserirci i dati
 
   let passengerNameEl = document.querySelector('.passenger_name');
   let offertEl = document.querySelector('.offert');
@@ -62,6 +80,7 @@ btn.addEventListener('click', function() {
   let ticketPriceEl = document.querySelector('.ticket_price');
 
   passengerNameEl.innerHTML = nomeUtente;
+  carrozzaEl.innerHTML = gemeratoreCarrozza;
 
 
   //imposto il prezzo in base all'età
