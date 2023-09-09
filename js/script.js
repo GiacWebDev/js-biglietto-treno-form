@@ -36,13 +36,13 @@
 // 2.
 
 // prendo il pulsante da html a js e gli dico le funzioni al suo interno
-const btn = document.getElementById('#generate_price')
-btn.addEventListener('click', function(){
+const btn = document.getElementById('generate_price')
+btn.addEventListener('click', function() {
   // prendo i valori dai campi in html
-  let nomeUtente = document.getElementById('#name').value;
-  let kmTotali = document.getElementById('#km').value;
+  let nomeUtente = document.getElementById('name').value;
+  let kmTotali = document.getElementById('km').value;
   // fascia età per applicare sconti
-  let fasciaEta = document.getElementById('#age').value
+  let fasciaEta = document.getElementById('age').value
   // faccio dei log di verifca
   console.log(nomeUtente);
   console.log(kmTotali);
@@ -51,17 +51,39 @@ btn.addEventListener('click', function(){
   const prezzoKm = 0.21;
   let costoBiglietto = prezzoKm * kmTotali;
 
+  // Riporto classi html su JS per scriverci dentro
+
+  let ticketEl = document.querySelector('.ticket');
+
+  let passengerNameEl = document.querySelector('.passenger_name');
+  let offertEl = document.querySelector('.offert');
+  let carrozzaEl = document.querySelector('.carrozza');
+  let CPCodeEl = document.querySelector('.CP_code');
+  let ticketPriceEl = document.querySelector('.ticket_price');
+
+  passengerNameEl.innerHTML = nomeUtente;
+
+
   //imposto il prezzo in base all'età
-   if (fasciaEta == 2) {
+   if (fasciaEta == 1) {
      costoBiglietto = costoBiglietto - (costoBiglietto * 20 / 100);
      console.log(costoBiglietto);
+     offertEl.innerHTML = 'Biglietto Ridotto';
+     ticketPriceEl.innerHTML = `€ ${costoBiglietto}`;
+
    } else if (fasciaEta == 3) {
      costoBiglietto = costoBiglietto - (costoBiglietto * 40 / 100);
      console.log(costoBiglietto);
-   } else if (fasciaEta == 1) {
+     offertEl.innerHTML = 'Biglietto Ridotto';
+     ticketPriceEl.innerHTML = `€ ${costoBiglietto}`;
+
+   } else if (fasciaEta == 2) {
     costoBiglietto = costoBiglietto;
     console.log(costoBiglietto);
+    offertEl.innerHTML = 'Biglietto Intero';
+    ticketEl.innerHTML = `€ ${costoBiglietto}`;
    }
+
   })
 
 
