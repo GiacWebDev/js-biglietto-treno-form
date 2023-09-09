@@ -35,14 +35,14 @@
 
 // 2.
 
-// prendo il pulsante da html a js e gli dico le funzioni
-const btn = document.getElementById('generate_price')
-btn.addEventListener('click',function(){
+// prendo il pulsante da html a js e gli dico le funzioni al suo interno
+const btn = document.getElementById('#generate_price')
+btn.addEventListener('click', function(){
   // prendo i valori dai campi in html
-  const nomeUtente = document.getElementById('name').value;
-  const kmTotali = document.getElementById('km').value;
+  let nomeUtente = document.getElementById('#name').value;
+  let kmTotali = document.getElementById('#km').value;
   // fascia età per applicare sconti
-  const fasciaEta = document.getElementById('floatingSelect').value
+  let fasciaEta = document.getElementById('#age').value
   // faccio dei log di verifca
   console.log(nomeUtente);
   console.log(kmTotali);

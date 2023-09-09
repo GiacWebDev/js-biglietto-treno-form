@@ -13,43 +13,32 @@
 </head>
 <body>
 
-  <div class="container">
-
     <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
 
-    <!-- FORM -->
+    <!-- NOME -->
 
-        <div id="main_part_form">
-          <!-- NOME -->
-            <div>
-                <label for="name">Nome e Cognome</label>
-                <input type="text" id="name" name="name">
-            </div>
-            <!-- KM -->
-            <div>
-                <label for="km">Km da percorrere</label>
-                <input type="text" id="km" name="km">
-            </div>
-            <!-- ANNI -->
-            <div>
-                <label for="age">Fascia d'età</label>
-                <div class="form">
-                  <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                    <option value="1">Maggiorenne</option>
-                    <option value="2">Minorenne</option>
-                    <option value="3">Over65</option>
-                  </select>
-                </div>
-            </div>
-        </div>
+    <label for="name">Inserire il nome</label>
+    <input type="text" id="name" name="name">
+
+    <!-- KM -->
+
+    <label for="km">Km da percorrere</label>
+    <input type="text" id="km" name="km">
+
+    <!-- ANNI -->
+
+    <select name="age" id="age">
+      <option value="1">minorenne</option>
+      <option value="2">maggiorenne</option>
+      <option value="3">over65</option>
+    </select>
 
         <!-- BOTTONE -->
-        <div id="btn_part">
-            <button id="generate_price">Genera</button>
-            <button id="cancel">Annulla</button>
-        </div>
 
-  </div>
+    <button id="generate_price">Genera</button>
+    <button id="cancel">Annulla</button>
+
+
   <script src="js/script.js"></script>
 </body>
 </html>
