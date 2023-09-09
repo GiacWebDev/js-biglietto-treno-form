@@ -72,3 +72,8 @@ button#cancell {
 .row .ticket h2 {
   color: black;
 }
+
+.row .ticket {
+  background-color: white;
+  border-radius: 10px;
+}
